@@ -13,6 +13,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: app-2-svc
+            name: app-2-service
             port:
               number: 80

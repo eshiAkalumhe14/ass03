@@ -6,13 +6,11 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      run: my-nginx
   replicas: 5
   template:
     metadata:
       labels:
         app: nginx
-        run: my-nginx
     spec:
       containers:
       - name: myapp
@@ -20,9 +18,9 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - name: config-volume
+        - name: nginx-config
           mountPath: /etc/nginx/conf.d
       volumes:
-      - name: config-volume
+      - name: nginx-config
         configMap:
           name: nginx-configmap 
