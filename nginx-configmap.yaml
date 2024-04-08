@@ -5,9 +5,8 @@ metadata:
 data:
   default.conf : |
     upstream backend {
-      server app-1:8080;
-      server app-2:8080;
-
+      server app-1-service:80;
+      server app-2-service:80;
       }
     server {
       location / {
